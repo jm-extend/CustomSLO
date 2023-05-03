@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Extend Warranty
+ *
+ * @author      Extend Magento Team <magento@guidance.com>
+ * @category    Extend
+ * @package     Warranty
+ * @copyright   Copyright (c) 2021 Extend Inc. (https://www.extend.com/)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="extend" translate="label comment" sortOrder="10">
+            <label>Extend</label>
+        </tab>
+        <section id="warranty"
+                 translate="label comment"
+                 sortOrder="10"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1"
+                 canRestore="1">
+            <tab>extend</tab>
+            <label>Extend Protection Plans</label>
+            <resource>Extend_Warranty::warranty</resource>
+            <group id="offers"
+                   translate="label comment"
+                   sortOrder="60"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1"
+                   canRestore="1">
+                <label>Offers</label>
+                <depends>
+                    <field id="warranty/enableExtend/enable">1</field>
+                </depends>
+
+                <field id="pdp_placement"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="80"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <label>PDP Offers Button placement</label>
+                    <comment>Applied to the Simple and Configurable product pages</comment>
+                    <depends>
+                        <field id="warranty/offers/pdp_enabled">1</field>
+                    </depends>
+                    <source_model>Extend\CustomSLO\Model\Config\Source\ProductPagePlacement</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
