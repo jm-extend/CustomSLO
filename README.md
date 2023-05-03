@@ -11,4 +11,4 @@ Please note, you can also install the module in app/code/Extend/Warranty, by dow
 you should end up with app/code/Extend/CustomSLO
 enable it : bin/magento enable Extend_CustomSLO
 
-you will end up with an option in Stores/Configuration/Extend/, select “SLO Special: After AM Theme Block”
+you will end up with an option in Stores/Configuration/Extend/Display Settings/PDP Offers Button placement, select “SLO Special: After AM Theme Block”
